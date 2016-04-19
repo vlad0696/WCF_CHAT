@@ -1,0 +1,12 @@
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll.config
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.csprojResolveAssemblyReference.cache
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.dll
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll.config
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.csprojResolveAssemblyReference.cache
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.dll
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.pdb

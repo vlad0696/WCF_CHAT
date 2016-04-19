@@ -1,0 +1,16 @@
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedHost1.exe.config
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedHost1.exe
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedHost1.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedLib.dll
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedLib.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\obj\Debug\GettingStartedHost1.csprojResolveAssemblyReference.cache
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\obj\Debug\GettingStartedHost1.exe
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedHost1\GettingStartedHost1\obj\Debug\GettingStartedHost1.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedHost1.exe.config
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\obj\Debug\GettingStartedHost1.exe
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\obj\Debug\GettingStartedHost1.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\obj\Debug\GettingStartedHost1.csprojResolveAssemblyReference.cache
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedHost1.exe
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedHost1.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedLib.dll
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedHost1\GettingStartedHost1\bin\Debug\GettingStartedLib.pdb

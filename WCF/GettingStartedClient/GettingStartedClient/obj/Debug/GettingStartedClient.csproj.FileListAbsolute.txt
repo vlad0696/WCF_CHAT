@@ -1,0 +1,21 @@
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\bin\Debug\GettingStartedClient.exe.config
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\bin\Debug\GettingStartedClient.exe
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\bin\Debug\GettingStartedClient.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.csprojResolveAssemblyReference.cache
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.Properties.Resources.resources
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.csproj.GenerateResource.Cache
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.exe
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.Form1.resources
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\bin\Debug\GettingStartedClient.exe.config
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.exe
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\bin\Debug\GettingStartedClient.exe
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\bin\Debug\GettingStartedClient.pdb
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.csprojResolveAssemblyReference.cache
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.Form1.resources
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.Properties.Resources.resources
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.csproj.GenerateResource.Cache
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\GettingStartedClient.Form1.ru.resources
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\bin\Debug\ru\GettingStartedClient.resources.dll
+C:\Users\техно\Desktop\КСиС\4 лаба - копия\GettingStartedClient\GettingStartedClient\obj\Debug\ru\GettingStartedClient.resources.dll
