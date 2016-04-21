@@ -81,10 +81,6 @@ namespace GettingStartedLib
                     All_usver[All_usver.Count - 1].callback = null;
         }
 
-        public bool Subscribe_room(string Name)
-        {
-            return true;
-        }
 
         public bool Subscribe(string Name)
         {
@@ -116,10 +112,17 @@ namespace GettingStartedLib
         public bool UnSubscribe()
         {
             mycallback currentContext = OperationContext.Current.GetCallbackChannel<mycallback>();
-
-            return true;
-          
-        }
+            for (int i = 0; i < All_usver.Count; i++)
+            {
+               if (All_usver[i].callback== currentContext)
+                {
+                    Console.WriteLine("Goodbye " + All_usver[i].Name);
+                    All_usver.Remove(All_usver[i]);
+                    return true;
+                }
+            }
+            return false;
+         }
 
         public void SendMessage(Message message)
         {
