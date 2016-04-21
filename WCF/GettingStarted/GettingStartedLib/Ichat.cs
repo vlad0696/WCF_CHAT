@@ -29,9 +29,6 @@ namespace GettingStartedLib
         void craete_new_man(string name);
 
         [OperationContract]
-        bool Subscribe_room(string Name);
-
-        [OperationContract]
         void SendMessage(Message message);
     }
 
@@ -48,10 +45,6 @@ namespace GettingStartedLib
         void on_create_new_room(string new_room);
     }
 
-    public interface callback_rooms
-    {
-
-    }
 
     [DataContract(Name="people")]
     public class People
@@ -74,13 +67,4 @@ namespace GettingStartedLib
         public string UserMessage { get; set; }
     }
 
-    [DataContract(Name ="rooms")]
-    public class Rooms
-    {
-        [DataMember]
-        public List<string> people_spisok;
-
-        [DataMember]
-        public string rooms;   
-    }
 }
