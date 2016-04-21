@@ -144,13 +144,9 @@ namespace GettingStartedClient
         {
             InstanceContext context = new InstanceContext(this);
             listener.initialiaze(context);
-            if (listener.clientProxy.Subscribe_room(name_of_room)) { 
-                MessageBox.Show("Now, you are create room: "+name_of_room);
-                listener.clientProxy.create_private_room(Listener.currentUser, name_of_room);
-               }
-            else
-                MessageBox.Show("An error has occurred");
-            
+            MessageBox.Show("Now, you are create room: "+name_of_room);
+            listener.clientProxy.create_private_room(Listener.currentUser, name_of_room);
+           
         }
 
         public void create_new_man(string people)
@@ -198,8 +194,15 @@ namespace GettingStartedClient
 
         public void Dispose()
         {
-            listener.clientProxy.Close();
-        }
+            try {
+                listener.clientProxy.Close();
+            }
+            catch
+            {
+                MessageBox.Show("private message sent");
+            }
+            
+       }
     }
 
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single)]
