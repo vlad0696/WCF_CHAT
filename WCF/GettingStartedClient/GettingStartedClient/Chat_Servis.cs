@@ -175,12 +175,6 @@ public interface IChat
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/craete_new_man", ReplyAction="http://tempuri.org/IChat/craete_new_manResponse")]
     System.Threading.Tasks.Task craete_new_manAsync(string name);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/Subscribe_room", ReplyAction="http://tempuri.org/IChat/Subscribe_roomResponse")]
-    bool Subscribe_room(string Name);
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/Subscribe_room", ReplyAction="http://tempuri.org/IChat/Subscribe_roomResponse")]
-    System.Threading.Tasks.Task<bool> Subscribe_roomAsync(string Name);
-    
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/SendMessage", ReplyAction="http://tempuri.org/IChat/SendMessageResponse")]
     void SendMessage(GettingStartedLib.Message message);
     
@@ -295,16 +289,6 @@ public partial class ChatClient : System.ServiceModel.DuplexClientBase<IChat>, I
     public System.Threading.Tasks.Task craete_new_manAsync(string name)
     {
         return base.Channel.craete_new_manAsync(name);
-    }
-    
-    public bool Subscribe_room(string Name)
-    {
-        return base.Channel.Subscribe_room(Name);
-    }
-    
-    public System.Threading.Tasks.Task<bool> Subscribe_roomAsync(string Name)
-    {
-        return base.Channel.Subscribe_roomAsync(Name);
     }
     
     public void SendMessage(GettingStartedLib.Message message)
