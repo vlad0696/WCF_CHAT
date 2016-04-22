@@ -15,33 +15,19 @@ namespace GettingStartedClient
 {
     public partial class Form1 : Form
     {
-        Listener listener = new Listener();
-
+        Sender obj = new Sender();
         public static RichTextBox TxtChat { get; private set; }
         public static ComboBox combo { get; private set; }
-        public static ComboBox List_of_people { get; private set; }
-        public struct person
-        {
-            public string login;
-            public List<string> rooms;
-        };
-        public List<person> Persons = new List<person>();
+        public static ComboBox List_of_people { get; private set; }//убрать
         public Form1()
         {
             InitializeComponent();
-            //check_room.
             Form1.TxtChat = this.txtChat;
             combo = check_room;
             Form1.List_of_people = this.list_of_people;
-            InstanceContext context = new InstanceContext(this);
-            listener.initialiaze(context);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Create_new_men();
-        }
-
+ 
         private void Form1_Load(object sender, EventArgs e)
         {
             check_room.SelectedIndex = 0;
@@ -49,28 +35,18 @@ namespace GettingStartedClient
             panel2.Visible = false;
         }
 
-        private void Create_new_men()
-        {
-         //   richTextBox1.AppendText(client.craete_new_man(text_login.Text));
-        }
-
+   
         private void button2_Click(object sender, EventArgs e)
         {
-            listener.BeginConnection(text_login.Text);
+            obj.BeginConnection(text_login.Text);
             //Entry_in_chat();
             panel1.Visible = false;
             panel2.Visible = true;
         }
 
-        private void Entry_in_chat()
-        {
-          //  ChatClient client = new ChatClient();
-        //    txtChat.AppendText(client.craete_new_man(text_login.Text));
-        }
-
         private void button_exit_Click(object sender, EventArgs e)
         {
-            listener.Dispose();
+            obj.listener.Dispose();
             panel2.Visible = false;
             panel1.Visible = true;
         }
@@ -124,7 +100,26 @@ namespace GettingStartedClient
     public class Sender : IChatCallback, IDisposable
     {
 
-        Listener listener = new Listener();
+        public Listener listener = new Listener();
+        public static GettingStartedLib.people currentUser { get; set; }
+
+
+        public void BeginConnection(string name)
+        {
+            currentUser = new GettingStartedLib.people() { Name = name };
+            currentUser.Rooms = new string[10];
+            currentUser.Rooms[0] = "Общая";
+            InstanceContext context = new InstanceContext(this);
+            listener.initialiaze(context);
+            if (listener.clientProxy.Subscribe(name))
+            {
+                MessageBox.Show("Now, you are connected to the chat");
+                Create_new_man(name);
+            }
+            else
+                MessageBox.Show("An error has occurred");
+        }
+
 
         public void SendNewMessage(string strMessage)
         {
@@ -133,7 +128,8 @@ namespace GettingStartedClient
             
             GettingStartedLib.Message newMessage = new GettingStartedLib.Message()
             {
-                CurrentUser = Listener.currentUser.Name,
+                
+                CurrentUser = currentUser.Name,
                 UserMessage = strMessage
             };
             listener.clientProxy.SendMessage(newMessage);
@@ -145,11 +141,11 @@ namespace GettingStartedClient
             InstanceContext context = new InstanceContext(this);
             listener.initialiaze(context);
             MessageBox.Show("Now, you are create room: "+name_of_room);
-            listener.clientProxy.create_private_room(Listener.currentUser, name_of_room);
+            listener.clientProxy.create_private_room(currentUser, name_of_room);
            
         }
 
-        public void create_new_man(string people)
+        public void Create_new_man(string people)
         {
             InstanceContext context = new InstanceContext(this);
             listener.initialiaze(context);
@@ -166,11 +162,10 @@ namespace GettingStartedClient
         public void send_private_message(string message, string private_room)
         {
             try {
-                Listener listener = new Listener();
                 InstanceContext context = new InstanceContext(this);
                 listener.initialiaze(context);
                 GettingStartedLib.Message new_message = new GettingStartedLib.Message();
-                new_message.CurrentUser = Listener.currentUser.Name;
+                new_message.CurrentUser = currentUser.Name;
                 new_message.UserMessage = message;
                 listener.clientProxy.send_private_message(new_message, private_room);
             }
@@ -197,10 +192,7 @@ namespace GettingStartedClient
             try {
                 listener.clientProxy.Close();
             }
-            catch
-            {
-                MessageBox.Show("private message sent");
-            }
+            catch{}
             
        }
     }
@@ -212,26 +204,8 @@ namespace GettingStartedClient
 
         public void initialiaze(InstanceContext context)
         {
-           clientProxy = new ChatClient(context, "WSDualHttpBinding_IChat");
-        }
-
-        public static GettingStartedLib.people currentUser { get; set; }
-        //public static GettingStartedLib.rooms currentRoom;
-        public void BeginConnection(string name)
-        {
-            Listener.currentUser = new GettingStartedLib.people() { Name = name };
-            Listener.currentUser.Rooms= new string[10];
-            Listener.currentUser.Rooms[0]= "Общая";
-            InstanceContext context = new InstanceContext(this);
-            initialiaze(context);
-            if (clientProxy.Subscribe(name))
-            {
-                MessageBox.Show("Now, you are connected to the chat");
-                Sender obj = new Sender();
-                obj.create_new_man(name);
-            }
-            else
-                MessageBox.Show("An error has occurred");
+            InstanceContext context1 = new InstanceContext(this);
+           clientProxy = new ChatClient(context1, "WSDualHttpBinding_IChat");
         }
 
         public void on_new_message(string new_message)
