@@ -124,10 +124,6 @@
   <data name="button_exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="richTextBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;richTextBox2.Name" xml:space="preserve">
     <value>richTextBox2</value>
   </data>
@@ -135,29 +131,33 @@
   <data name="list_of_people.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 21</value>
   </data>
-  <data name="button_send.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 150</value>
+  <data name="richTextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 108</value>
   </data>
   <data name="&gt;&gt;button1.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
+  <data name="txtChat.AccessibleName" xml:space="preserve">
+    <value>txtChat1</value>
+  </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button_create_room.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 297</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_create_room.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="button_exit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 416</value>
   </data>
   <data name="&gt;&gt;button_input.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;button_input.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button_new_man.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="button_create_room.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 297</value>
   </data>
   <data name="&gt;&gt;button_send.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -180,17 +180,20 @@
   <data name="text_login.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 47</value>
   </data>
-  <data name="&gt;&gt;button_new_man.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button_create_room.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 23</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
+  <data name="txtChat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 0</value>
+  </data>
   <data name="&gt;&gt;button_input.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button_exit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 416</value>
+  <data name="&gt;&gt;text_login.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 13</value>
@@ -198,14 +201,8 @@
   <data name="button_new_man.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 23</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel1</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 140</value>
@@ -231,8 +228,8 @@
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 179</value>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;button_exit.Name" xml:space="preserve">
     <value>button_exit</value>
@@ -246,8 +243,8 @@
   <data name="text_create.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 22</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 23</value>
+  <data name="button_new_man.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -261,8 +258,8 @@
   <data name="button_create_room.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>655, 498</value>
+  <data name="&gt;&gt;button_create_room.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;button_new_man.Name" xml:space="preserve">
     <value>button_new_man</value>
@@ -279,20 +276,23 @@
   <data name="text_create.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 269</value>
   </data>
-  <data name="&gt;&gt;text_create.Name" xml:space="preserve">
-    <value>text_create</value>
-  </data>
   <data name="list_of_people.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="button_create_room.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 23</value>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 179</value>
   </data>
   <data name="&gt;&gt;check_room.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
   <data name="check_room.Items" xml:space="preserve">
     <value>Общая комната</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="check_room.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 242</value>
@@ -303,8 +303,8 @@
   <data name="button_input.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="button_new_man.Text" xml:space="preserve">
-    <value>Пригласить пользователя</value>
+  <data name="button_create_room.Text" xml:space="preserve">
+    <value>Создать комнату</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -312,11 +312,8 @@
   <data name="button_input.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 34</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;text_login.Name" xml:space="preserve">
-    <value>text_login</value>
+  <data name="button_send.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 150</value>
   </data>
   <data name="&gt;&gt;list_of_people.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -327,26 +324,26 @@
   <data name="&gt;&gt;check_room.Name" xml:space="preserve">
     <value>check_room</value>
   </data>
-  <data name="&gt;&gt;text_create.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
   <data name="&gt;&gt;button_input.Name" xml:space="preserve">
     <value>button_input</value>
   </data>
   <data name="button_new_man.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 357</value>
   </data>
-  <data name="text_login.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;button_input.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="button_create_room.Text" xml:space="preserve">
-    <value>Создать комнату</value>
+  <data name="&gt;&gt;text_create.Name" xml:space="preserve">
+    <value>text_create</value>
+  </data>
+  <data name="&gt;&gt;txtChat.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="check_room.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 12</value>
+  <data name="list_of_people.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 327</value>
   </data>
   <data name="&gt;&gt;list_of_people.Name" xml:space="preserve">
     <value>list_of_people</value>
@@ -363,14 +360,11 @@
   <data name="button_exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 23</value>
   </data>
-  <data name="&gt;&gt;button_send.Name" xml:space="preserve">
-    <value>button_send</value>
+  <data name="richTextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;button_exit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -387,9 +381,6 @@
   <data name="button_input.Text" xml:space="preserve">
     <value>Вход</value>
   </data>
-  <data name="richTextBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 36</value>
-  </data>
   <data name="&gt;&gt;button_create_room.Name" xml:space="preserve">
     <value>button_create_room</value>
   </data>
@@ -405,14 +396,14 @@
   <data name="button_input.Location" type="System.Drawing.Point, System.Drawing">
     <value>63, 77</value>
   </data>
-  <data name="richTextBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 108</value>
+  <data name="text_login.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="button_send.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 23</value>
   </data>
   <data name="&gt;&gt;button_send.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -420,14 +411,14 @@
   <data name="&gt;&gt;list_of_people.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;button_exit.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;text_create.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 24</value>
+  <data name="&gt;&gt;button_send.Name" xml:space="preserve">
+    <value>button_send</value>
   </data>
-  <data name="txtChat.AccessibleName" xml:space="preserve">
-    <value>txtChat1</value>
+  <data name="button_new_man.Text" xml:space="preserve">
+    <value>Пригласить пользователя</value>
   </data>
   <data name="&gt;&gt;button_create_room.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -441,20 +432,20 @@
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="check_room.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 21</value>
+  <data name="&gt;&gt;button_new_man.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;text_create.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="list_of_people.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 327</value>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;text_login.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;text_login.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="richTextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 36</value>
   </data>
   <data name="&gt;&gt;check_room.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -480,35 +471,38 @@
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;button_create_room.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 12</value>
   </data>
   <data name="&gt;&gt;richTextBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;list_of_people.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="check_room.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 21</value>
+  </data>
   <data name="&gt;&gt;richTextBox2.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="button_create_room.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="txtChat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>386, 498</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>655, 498</value>
   </data>
   <data name="text_create.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="txtChat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 0</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
   </data>
   <data name="button_exit.Text" xml:space="preserve">
     <value>Выход</value>
   </data>
-  <data name="&gt;&gt;txtChat.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;text_login.Name" xml:space="preserve">
+    <value>text_login</value>
   </data>
-  <data name="&gt;&gt;list_of_people.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;button_exit.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -520,10 +514,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 24</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtChat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 498</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

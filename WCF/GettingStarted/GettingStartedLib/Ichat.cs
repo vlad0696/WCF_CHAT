@@ -7,7 +7,7 @@ using System.Text;
 
 namespace GettingStartedLib
 {
-    [ServiceContract(CallbackContract = typeof(mycallback), SessionMode =SessionMode.Required)]
+    [ServiceContract(CallbackContract = typeof(MyCallback), SessionMode =SessionMode.Required)]
     public interface IChat
     {
         [OperationContract]
@@ -17,45 +17,45 @@ namespace GettingStartedLib
         bool UnSubscribe();
         
         [OperationContract]
-        void create_private_room(People man, string name_of_room);
+        void CreatePrivateRoom(People Man, string NameOfRoom);
 
         [OperationContract]
-        void add_usver_to_private_room(string usver_name, string room);
+        void AddUserToPrivateRoom(string UserName, string Room);
 
         [OperationContract]
-        void send_private_message(Message new_message, string private_room);
+        void SendPrivateMessage(Message NewMessage, string PrivateRoom);
 
         [OperationContract]
-        void craete_new_man(string name);
+        void CreateNewMan(string name);
 
         [OperationContract]
         void SendMessage(Message message);
     }
 
     [ServiceContract]
-    public interface mycallback
+    public interface MyCallback
     {
         [OperationContract(IsOneWay =true)]
-        void on_new_message(string new_message);
+        void OnNewMessage(string new_message);
 
         [OperationContract(IsOneWay = true)]
-        void on_new_usver(string Usver_name);
+        void OnNewUser(string Usver_name);
         
         [OperationContract(IsOneWay = true)]
-        void on_create_new_room(string new_room);
+        void OnCreateNewRoom(string new_room);
     }
 
 
-    [DataContract(Name="people")]
+    [DataContract(Name = "People")]
     public class People
     {
         [DataMember]
         public string Name { get; set; }
 
         [DataMember]
-        public mycallback callback;
+        public MyCallback Callback { get; set; }
         [DataMember]
-        public List<string> Rooms = new List<string>();
+        public List<string> Rooms = new List<string>(); 
     }
 
     [DataContract(Name ="Message")]

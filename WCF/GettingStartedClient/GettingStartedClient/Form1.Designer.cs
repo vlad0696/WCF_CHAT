@@ -101,7 +101,7 @@
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1Click_1);
             // 
             // list_of_people
             // 
@@ -117,28 +117,28 @@
             this.check_room.Items.AddRange(new object[] {
             resources.GetString("check_room.Items")});
             this.check_room.Name = "check_room";
-            this.check_room.SelectedValueChanged += new System.EventHandler(this.go);
+            this.check_room.SelectedValueChanged += new System.EventHandler(this.SegueInTheRoom);
             // 
             // button_exit
             // 
             resources.ApplyResources(this.button_exit, "button_exit");
             this.button_exit.Name = "button_exit";
             this.button_exit.UseVisualStyleBackColor = true;
-            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            this.button_exit.Click += new System.EventHandler(this.buttonExitClick);
             // 
             // button_new_man
             // 
             resources.ApplyResources(this.button_new_man, "button_new_man");
             this.button_new_man.Name = "button_new_man";
             this.button_new_man.UseVisualStyleBackColor = true;
-            this.button_new_man.Click += new System.EventHandler(this.button_new_man_Click);
+            this.button_new_man.Click += new System.EventHandler(this.buttonNewManClick);
             // 
             // button_create_room
             // 
             resources.ApplyResources(this.button_create_room, "button_create_room");
             this.button_create_room.Name = "button_create_room";
             this.button_create_room.UseVisualStyleBackColor = true;
-            this.button_create_room.Click += new System.EventHandler(this.button_create_room_Click);
+            this.button_create_room.Click += new System.EventHandler(this.buttonCreateRoomClick);
             // 
             // text_create
             // 
@@ -150,7 +150,7 @@
             resources.ApplyResources(this.button_send, "button_send");
             this.button_send.Name = "button_send";
             this.button_send.UseVisualStyleBackColor = true;
-            this.button_send.Click += new System.EventHandler(this.button_send_Click);
+            this.button_send.Click += new System.EventHandler(this.buttonSendClick);
             // 
             // label3
             // 
@@ -167,8 +167,8 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtChat);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

@@ -15,19 +15,19 @@ namespace GettingStartedLib
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="people", Namespace="http://schemas.datacontract.org/2004/07/GettingStartedLib")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="People", Namespace="http://schemas.datacontract.org/2004/07/GettingStartedLib")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GettingStartedLib.Message))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
-    public partial class people : object, System.Runtime.Serialization.IExtensibleDataObject
+    public partial class People : object, System.Runtime.Serialization.IExtensibleDataObject
     {
         
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
+        private object CallbackField;
+        
         private string NameField;
         
         private string[] RoomsField;
-        
-        private object callbackField;
         
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
@@ -38,6 +38,19 @@ namespace GettingStartedLib
             set
             {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public object Callback
+        {
+            get
+            {
+                return this.CallbackField;
+            }
+            set
+            {
+                this.CallbackField = value;
             }
         }
         
@@ -64,19 +77,6 @@ namespace GettingStartedLib
             set
             {
                 this.RoomsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public object callback
-        {
-            get
-            {
-                return this.callbackField;
-            }
-            set
-            {
-                this.callbackField = value;
             }
         }
     }
@@ -151,29 +151,29 @@ public interface IChat
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/UnSubscribe", ReplyAction="http://tempuri.org/IChat/UnSubscribeResponse")]
     System.Threading.Tasks.Task<bool> UnSubscribeAsync();
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/create_private_room", ReplyAction="http://tempuri.org/IChat/create_private_roomResponse")]
-    void create_private_room(GettingStartedLib.people man, string name_of_room);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/CreatePrivateRoom", ReplyAction="http://tempuri.org/IChat/CreatePrivateRoomResponse")]
+    void CreatePrivateRoom(GettingStartedLib.People Man, string NameOfRoom);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/create_private_room", ReplyAction="http://tempuri.org/IChat/create_private_roomResponse")]
-    System.Threading.Tasks.Task create_private_roomAsync(GettingStartedLib.people man, string name_of_room);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/CreatePrivateRoom", ReplyAction="http://tempuri.org/IChat/CreatePrivateRoomResponse")]
+    System.Threading.Tasks.Task CreatePrivateRoomAsync(GettingStartedLib.People Man, string NameOfRoom);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/add_usver_to_private_room", ReplyAction="http://tempuri.org/IChat/add_usver_to_private_roomResponse")]
-    void add_usver_to_private_room(string usver_name, string room);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/AddUserToPrivateRoom", ReplyAction="http://tempuri.org/IChat/AddUserToPrivateRoomResponse")]
+    void AddUserToPrivateRoom(string UserName, string Room);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/add_usver_to_private_room", ReplyAction="http://tempuri.org/IChat/add_usver_to_private_roomResponse")]
-    System.Threading.Tasks.Task add_usver_to_private_roomAsync(string usver_name, string room);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/AddUserToPrivateRoom", ReplyAction="http://tempuri.org/IChat/AddUserToPrivateRoomResponse")]
+    System.Threading.Tasks.Task AddUserToPrivateRoomAsync(string UserName, string Room);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/send_private_message", ReplyAction="http://tempuri.org/IChat/send_private_messageResponse")]
-    void send_private_message(GettingStartedLib.Message new_message, string private_room);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/SendPrivateMessage", ReplyAction="http://tempuri.org/IChat/SendPrivateMessageResponse")]
+    void SendPrivateMessage(GettingStartedLib.Message NewMessage, string PrivateRoom);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/send_private_message", ReplyAction="http://tempuri.org/IChat/send_private_messageResponse")]
-    System.Threading.Tasks.Task send_private_messageAsync(GettingStartedLib.Message new_message, string private_room);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/SendPrivateMessage", ReplyAction="http://tempuri.org/IChat/SendPrivateMessageResponse")]
+    System.Threading.Tasks.Task SendPrivateMessageAsync(GettingStartedLib.Message NewMessage, string PrivateRoom);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/craete_new_man", ReplyAction="http://tempuri.org/IChat/craete_new_manResponse")]
-    void craete_new_man(string name);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/CreateNewMan", ReplyAction="http://tempuri.org/IChat/CreateNewManResponse")]
+    void CreateNewMan(string name);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/craete_new_man", ReplyAction="http://tempuri.org/IChat/craete_new_manResponse")]
-    System.Threading.Tasks.Task craete_new_manAsync(string name);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/CreateNewMan", ReplyAction="http://tempuri.org/IChat/CreateNewManResponse")]
+    System.Threading.Tasks.Task CreateNewManAsync(string name);
     
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChat/SendMessage", ReplyAction="http://tempuri.org/IChat/SendMessageResponse")]
     void SendMessage(GettingStartedLib.Message message);
@@ -186,14 +186,14 @@ public interface IChat
 public interface IChatCallback
 {
     
-    [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChat/on_new_message")]
-    void on_new_message(string new_message);
+    [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChat/OnNewMessage")]
+    void OnNewMessage(string new_message);
     
-    [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChat/on_new_usver")]
-    void on_new_usver(string Usver_name);
+    [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChat/OnNewUser")]
+    void OnNewUser(string Usver_name);
     
-    [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChat/on_create_new_room")]
-    void on_create_new_room(string new_room);
+    [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IChat/OnCreateNewRoom")]
+    void OnCreateNewRoom(string new_room);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -251,44 +251,44 @@ public partial class ChatClient : System.ServiceModel.DuplexClientBase<IChat>, I
         return base.Channel.UnSubscribeAsync();
     }
     
-    public void create_private_room(GettingStartedLib.people man, string name_of_room)
+    public void CreatePrivateRoom(GettingStartedLib.People Man, string NameOfRoom)
     {
-        base.Channel.create_private_room(man, name_of_room);
+        base.Channel.CreatePrivateRoom(Man, NameOfRoom);
     }
     
-    public System.Threading.Tasks.Task create_private_roomAsync(GettingStartedLib.people man, string name_of_room)
+    public System.Threading.Tasks.Task CreatePrivateRoomAsync(GettingStartedLib.People Man, string NameOfRoom)
     {
-        return base.Channel.create_private_roomAsync(man, name_of_room);
+        return base.Channel.CreatePrivateRoomAsync(Man, NameOfRoom);
     }
     
-    public void add_usver_to_private_room(string usver_name, string room)
+    public void AddUserToPrivateRoom(string UserName, string Room)
     {
-        base.Channel.add_usver_to_private_room(usver_name, room);
+        base.Channel.AddUserToPrivateRoom(UserName, Room);
     }
     
-    public System.Threading.Tasks.Task add_usver_to_private_roomAsync(string usver_name, string room)
+    public System.Threading.Tasks.Task AddUserToPrivateRoomAsync(string UserName, string Room)
     {
-        return base.Channel.add_usver_to_private_roomAsync(usver_name, room);
+        return base.Channel.AddUserToPrivateRoomAsync(UserName, Room);
     }
     
-    public void send_private_message(GettingStartedLib.Message new_message, string private_room)
+    public void SendPrivateMessage(GettingStartedLib.Message NewMessage, string PrivateRoom)
     {
-        base.Channel.send_private_message(new_message, private_room);
+        base.Channel.SendPrivateMessage(NewMessage, PrivateRoom);
     }
     
-    public System.Threading.Tasks.Task send_private_messageAsync(GettingStartedLib.Message new_message, string private_room)
+    public System.Threading.Tasks.Task SendPrivateMessageAsync(GettingStartedLib.Message NewMessage, string PrivateRoom)
     {
-        return base.Channel.send_private_messageAsync(new_message, private_room);
+        return base.Channel.SendPrivateMessageAsync(NewMessage, PrivateRoom);
     }
     
-    public void craete_new_man(string name)
+    public void CreateNewMan(string name)
     {
-        base.Channel.craete_new_man(name);
+        base.Channel.CreateNewMan(name);
     }
     
-    public System.Threading.Tasks.Task craete_new_manAsync(string name)
+    public System.Threading.Tasks.Task CreateNewManAsync(string name)
     {
-        return base.Channel.craete_new_manAsync(name);
+        return base.Channel.CreateNewManAsync(name);
     }
     
     public void SendMessage(GettingStartedLib.Message message)

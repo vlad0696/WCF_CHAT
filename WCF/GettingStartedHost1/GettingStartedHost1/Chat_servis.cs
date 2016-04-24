@@ -11,25 +11,25 @@ namespace GettingStartedLib
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     public class Chat_Servis : IChat
     {
-        private static List<mycallback> creating_rooms = new List<mycallback>();
-        private static List<People> All_usver = new List<People>();
+        private static List<MyCallback> creating_rooms = new List<MyCallback>();
+        private static List<People> AllUser = new List<People>();
 
-        public void create_private_room(People usver, string name_of_room)
+        public void CreatePrivateRoom(People usver, string name_of_room)
         {
             Console.WriteLine("Create room: " + name_of_room);
 
-            for (int i = 0; i < All_usver.Count; i++)
-                if (All_usver[i].Name == usver.Name)
+            for (int i = 0; i < AllUser.Count; i++)
+                if (AllUser[i].Name == usver.Name)
                 {
-                    All_usver[i].Rooms.Add(name_of_room);
-                    if (((ICommunicationObject)All_usver[i].callback).State == CommunicationState.Opened)
-                        All_usver[i].callback.on_create_new_room(name_of_room);
+                    AllUser[i].Rooms.Add(name_of_room);
+                    if (((ICommunicationObject)AllUser[i].Callback).State == CommunicationState.Opened)
+                        AllUser[i].Callback.OnCreateNewRoom(name_of_room);
                     else
-                        All_usver[i].callback = null;
+                        AllUser[i].Callback = null;
                 }
         }
 
-        public void send_private_message(Message new_message, string private_room)
+        public void SendPrivateMessage(Message new_message, string private_room)
         {
             Console.WriteLine(new_message.UserMessage);
             string newMessage = String.Format("in room {2} {0} says : {1}",
@@ -37,87 +37,87 @@ namespace GettingStartedLib
                 new_message.UserMessage,
                 private_room
                 );
-            for (int i = 0; i < All_usver.Count; i++)
-                if (All_usver[i].Rooms.Contains(private_room))
+            for (int i = 0; i < AllUser.Count; i++)
+                if (AllUser[i].Rooms.Contains(private_room))
                 {
-                    if (((ICommunicationObject)All_usver[i].callback).State == CommunicationState.Opened)
-                        All_usver[i].callback.on_new_message(newMessage);
+                    if (((ICommunicationObject)AllUser[i].Callback).State == CommunicationState.Opened)
+                        AllUser[i].Callback.OnNewMessage(newMessage);
                     else
-                        All_usver[i].callback = null;
+                        AllUser[i].Callback = null;
                 }
         }
 
 
-        public void craete_new_man(string name)
+        public void CreateNewMan(string name)
         {
-            for (int i = 0; i < All_usver.Count; i++)
-                if (((ICommunicationObject)All_usver[i].callback).State == CommunicationState.Opened)
-                    All_usver[i].callback.on_new_usver(name);
+            for (int i = 0; i < AllUser.Count; i++)
+                if (((ICommunicationObject)AllUser[i].Callback).State == CommunicationState.Opened)
+                    AllUser[i].Callback.OnNewUser(name);
                 else
-                    All_usver[i].callback = null;
+                    AllUser[i].Callback = null;
             update();
 
         }
 
-        public void add_usver_to_private_room(string usver_name, string room)
+        public void AddUserToPrivateRoom(string usver_name, string room)
         {
-            for (int i = 0; i < All_usver.Count; i++)
-                if (All_usver[i].Name == usver_name)
+            for (int i = 0; i < AllUser.Count; i++)
+                if (AllUser[i].Name == usver_name)
                 {
-                    All_usver[i].Rooms.Add(room);
-                    if (((ICommunicationObject)All_usver[i].callback).State == CommunicationState.Opened)
-                        All_usver[i].callback.on_create_new_room(room);
+                    AllUser[i].Rooms.Add(room);
+                    if (((ICommunicationObject)AllUser[i].Callback).State == CommunicationState.Opened)
+                        AllUser[i].Callback.OnCreateNewRoom(room);
                     else
-                        All_usver[i].callback = null;
+                        AllUser[i].Callback = null;
                 }
         }
 
         private void update()
         {
-            for (int i = 0; i < All_usver.Count - 1; i++)
-                if (((ICommunicationObject)All_usver[i].callback).State == CommunicationState.Opened)
-                    All_usver[All_usver.Count - 1].callback.on_new_usver(All_usver[i].Name);
+            for (int i = 0; i < AllUser.Count - 1; i++)
+                if (((ICommunicationObject)AllUser[i].Callback).State == CommunicationState.Opened)
+                    AllUser[AllUser.Count - 1].Callback.OnNewUser(AllUser[i].Name);
                 else
-                    All_usver[All_usver.Count - 1].callback = null;
+                    AllUser[AllUser.Count - 1].Callback = null;
         }
 
 
         public bool Subscribe(string Name)
         {
-            mycallback current = OperationContext.Current.GetCallbackChannel<mycallback>();
+            MyCallback current = OperationContext.Current.GetCallbackChannel<MyCallback>();
             Console.WriteLine("hi " + Name);
             People Usver = new People();
-            if (All_usver.Count == 0)
+            if (AllUser.Count == 0)
             {
                 Usver.Name = Name;
                 Usver.Rooms.Add("Общая");
-                Usver.callback = current;
-                All_usver.Add(Usver);
+                Usver.Callback = current;
+                AllUser.Add(Usver);
                 return true;
             }
             else
             {
-                for (int i = 0; i < All_usver.Count; i++)
-                    if (All_usver[i].Name == Name)
+                for (int i = 0; i < AllUser.Count; i++)
+                    if (AllUser[i].Name == Name)
                         return false;
 
             }
             Usver.Name = Name;
             Usver.Rooms.Add("Общая");
-            Usver.callback = current;
-            All_usver.Add(Usver);
+            Usver.Callback = current;
+            AllUser.Add(Usver);
             return true;
         }
 
         public bool UnSubscribe()
         {
-            mycallback currentContext = OperationContext.Current.GetCallbackChannel<mycallback>();
-            for (int i = 0; i < All_usver.Count; i++)
+            MyCallback currentContext = OperationContext.Current.GetCallbackChannel<MyCallback>();
+            for (int i = 0; i < AllUser.Count; i++)
             {
-                if (All_usver[i].callback == currentContext)
+                if (AllUser[i].Callback == currentContext)
                 {
-                    Console.WriteLine("Goodbye " + All_usver[i].Name);
-                    All_usver.Remove(All_usver[i]);
+                    Console.WriteLine("Goodbye " + AllUser[i].Name);
+                    AllUser.Remove(AllUser[i]);
                     return true;
                 }
             }
@@ -130,12 +130,12 @@ namespace GettingStartedLib
             string newMessage = String.Format(" {0} says : {1}",
                 message.CurrentUser,
                 message.UserMessage);
-            for (int i = 0; i < All_usver.Count; i++)
+            for (int i = 0; i < AllUser.Count; i++)
             {
-                if (((ICommunicationObject)All_usver[i].callback).State == CommunicationState.Opened)
-                    All_usver[i].callback.on_new_message(newMessage);
+                if (((ICommunicationObject)AllUser[i].Callback).State == CommunicationState.Opened)
+                    AllUser[i].Callback.OnNewMessage(newMessage);
                 else
-                    All_usver[i].callback = null;
+                    AllUser[i].Callback = null;
             }
         }
     }
